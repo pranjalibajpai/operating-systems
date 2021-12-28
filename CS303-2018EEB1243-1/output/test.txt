@@ -1,0 +1,67 @@
+pranjali@DESKTOP-PE8R3SN:~/os/a1/src$ gcc test.c function.c -o test -pthread -ljson-c -ldl
+pranjali@DESKTOP-PE8R3SN:~/os/a1/src$ ./test
+*********************Testing dll_func_invoker*********************
+
+[+]Success: Result of cos(1.200000) = 0.362358
+[+]Test Case 1: Passed
+
+[+]Success: Result of floor(4.900000) = 4.000000
+[+]Test Case 2: Passed
+
+[+]Success: Result of abs(-16) = 16
+[+]Test Case 3: Passed
+
+[+]Success: Result of pow(3.000000, 2.000000) = 9.000000
+[+]Test Case 4: Passed
+
+[-]Error: Cannot open DLL
+[+]Test Case 5: Passed
+
+[*]Info: Supported functions are: floor, cos, pow, abs
+[+]Test Case 6: Passed
+
+*********************Testing run_dll_func*********************
+
+[+]Success: Result of cos(1.200000) = 0.362358
+[+]Test Case 1: Passed
+
+[+]Success: Result of floor(4.700000) = 4.000000
+[+]Test Case 2: Passed
+
+[+]Success: Result of abs(-12) = 12
+[+]Test Case 3: Passed
+
+[+]Success: Result of pow(3.000000, 4.000000) = 81.000000
+[+]Test Case 4: Passed
+
+[-]Error: Cannot open DLL
+[+]Test Case 5: Passed
+
+[*]Info: Supported functions are: floor, cos, pow, abs
+[+]Test Case 6: Passed
+
+*********************Testing get_available_thread_index*********************
+
+[*]Info: Current Files: 4
+[*]Info: Current Memory: 900
+[+]Test Case 1: Passed
+
+[*]Info: Current Files: 4
+[*]Info: Current Memory: 900
+[+]Test Case 2: Passed
+
+[*]Info: Current Files: 4
+[*]Info: Current Memory: 1100
+[*]Info: Memory Limit Exceeded. Waiting for a thread to free memory
+[+]Test Case 3: Passed
+
+[*]Info: Current Files: 8
+[*]Info: Current Memory: 900
+[*]Info: File Limit Exceeded. Waiting for a thread to free files
+[+]Test Case 4: Passed
+
+[*]Info: Current Files: 8
+[*]Info: Current Memory: 1000
+[*]Info: File Limit Exceeded. Waiting for a thread to free files
+[*]Info: Memory Limit Exceeded. Waiting for a thread to free memory
+[+]Test Case 5: Passed

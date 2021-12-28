@@ -1,0 +1,31 @@
+pranjali@DESKTOP-PE8R3SN:~/a4$ gcc test.c function.c -o test -lm
+pranjali@DESKTOP-PE8R3SN:~/a4$ ./test
+*********************Testing generate_random_request()*********************
+
+[+]Test Case 1: Passed
+
+*********************Testing data_transfer_time()*********************
+
+[+]Test Case 1: Passed
+
+*********************Testing find_response_time()*********************
+
+[+]Test Case 1: Passed
+
+*********************Testing find_random_sequence()*********************
+
+[+]Test Case 1: Passed
+
+*********************Testing find_sst_request()*********************
+
+[+]Test Case 1: Passed
+
+[+]Test Case 2: Passed
+
+*********************Testing find_scan_sequence()*********************
+
+[+]Test Case 1: Passed
+
+*********************Testing find_cscan_sequence()*********************
+
+[+]Test Case 1: Passed

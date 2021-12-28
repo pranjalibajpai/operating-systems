@@ -1,0 +1,29 @@
+pranjali@DESKTOP-PE8R3SN:~/os/a1/src$ gcc server.c function.c -o server -pthread -ldl -ljson-c
+pranjali@DESKTOP-PE8R3SN:~/os/a1/src$ ./server 5500 6 10 10000
+[+]Success: Server program starting
+[+]Success: Server Socket created successfully with file descriptor 3
+[+]Success: Binding to the address done
+[+]Success: Listening for clients on port: 5500
+[+]Success: Client connected new socket created with fd 4
+[*]Info: Current Files: 6
+[*]Info: Current Memory: 908
+[+]Success: Thread Created
+[+]Success: Thread running client_fd 4
+[+]Success: Message received: { "DLL Name": "\/lib\/x86_64-linux-gnu\/libm.so.6", "Function Name": "cos", "Arguments": [ "1.2" ] }
+[+]Success: Acknowledgement send
+[+]Success: Result of cos(1.200000) = 0.362358
+[+]Success: DLL function invoking completed
+[+]Success: Thread execution complete client_fd 4
+[+]Success: Closed 4
+
+[+]Success: Client connected new socket created with fd 5
+[*]Info: Current Files: 6
+[*]Info: Current Memory: 1164
+[+]Success: Thread Created
+[+]Success: Thread running client_fd 5
+[+]Success: Message received: { "DLL Name": "\/lib\/x86_64-linux-gnu\/libm.so.6", "Function Name": "pow", "Arguments": [ "3", "4" ] }
+[+]Success: Acknowledgement send
+[+]Success: Result of pow(3.000000, 4.000000) = 81.000000
+[+]Success: DLL function invoking completed
+[+]Success: Thread execution complete client_fd 5
+[+]Success: Closed 5

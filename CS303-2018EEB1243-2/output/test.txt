@@ -1,0 +1,33 @@
+pranjali@DESKTOP-PE8R3SN:~/a2$ gcc test.c -o test -pthread
+pranjali@DESKTOP-PE8R3SN:~/a2$ ./test
+*********************Testing need_resource()*********************
+
+[+]Test Case 1: Passed
+
+[+]Test Case 2: Passed
+
+*********************Testing random_float()*********************
+
+[+]Test Case 1: Passed
+
+*********************Testing get_runnable_thread_index()*********************
+
+[+]Test Case 1: Passed
+
+[+]Test Case 2: Passed
+
+*********************Testing max_allocated_resource_thread()*********************
+
+[+]Test Case 1: Passed
+
+[+]Test Case 2: Passed
+
+*********************Testing min_allocated_resource_thread()*********************
+
+[+]Test Case 1: Passed
+
+[+]Test Case 2: Passed
+
+*********************Testing max_need_max_alloc_thread()*********************
+
+[+]Test Case 1: Passed

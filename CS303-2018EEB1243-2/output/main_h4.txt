@@ -1,0 +1,523 @@
+pranjali@DESKTOP-PE8R3SN:~/a2$ gcc main.c -o main -pthread
+pranjali@DESKTOP-PE8R3SN:~/a2$ ./main 2 A B 10 10 3 4 4 5
+[+]Success: Main program starting
+
+***********************RESOURCE STATUS(Name, Remaining): A=10 B=10 ***********************
+
+[Thread 1]: RUNNING
+[Thread 1]: Need resource A = 9
+[Thread 1]: Need resource B = 6
+[Thread 1]: Requesting resource B = 5
+[Thread 1]: Resource B allocated
+***********************RESOURCE STATUS(Name, Remaining): A=10 B=5 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=9 B=1
+
+[Thread 1]: Paused for 0 seconds
+[Thread 2]: RUNNING
+[Thread 2]: Need resource A = 6
+[Thread 2]: Need resource B = 8
+[Thread 2]: Requesting resource A = 4
+[Thread 2]: Resource A allocated
+[Thread 0]: RUNNING
+[Thread 1]: Requesting resource B = 1
+***********************RESOURCE STATUS(Name, Remaining): A=6 B=5 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=8
+
+[Thread 2]: Paused for 0 seconds
+[Thread 0]: Need resource A = 6
+[Thread 0]: Need resource B = 8
+[Thread 0]: Requesting resource A = 4
+[Thread 0]: Resource A allocated
+***********************RESOURCE STATUS(Name, Remaining): A=2 B=5 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=2 B=8
+
+[Thread 2]: Requesting resource B = 5
+[Thread 1]: Resource B allocated
+***********************RESOURCE STATUS(Name, Remaining): A=2 B=4 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=9 B=0
+
+[Thread 0]: Paused for 0 seconds
+[Thread 1]: Paused for 0 seconds
+[Thread 2]: Allocated 4 instances of Resource B. Waiting for B
+***********************RESOURCE STATUS(Name, Remaining): A=2 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 0]: Requesting resource B = 6
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=2 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=2 B=8
+
+[Thread 1]: Requesting resource A = 1
+[Thread 1]: Resource A allocated
+***********************RESOURCE STATUS(Name, Remaining): A=1 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=8 B=0
+
+[Thread 1]: Paused for 0 seconds
+[Thread 1]: Requesting resource A = 6
+[Thread 1]: Allocated 1 instances of Resource A. Waiting for A
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=7 B=0
+
+[Thread 2]: Requesting resource B = 4
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 0]: Requesting resource B = 5
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=2 B=8
+
+[Thread 1]: Requesting resource A = 6
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=7 B=0
+
+[Thread 2]: Requesting resource B = 3
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 0]: Requesting resource B = 2
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=2 B=8
+
+[Thread 1]: Requesting resource A = 5
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=7 B=0
+
+[Thread 2]: Requesting resource B = 1
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 0]: Requesting resource B = 8
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=2 B=8
+
+[Thread 1]: Requesting resource A = 3
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=7 B=0
+
+
+                        **************DETECTING DEADLOCK**************
+
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+                                *Deadlock Detected*
+
+                                Thread 0 deadlocked!!!!!
+                                Thread 1 deadlocked!!!!!
+                                Thread 2 deadlocked!!!!!
+
+Heuristic 4: Terminate first thread which is deadlocked
+Terminating Thread 0
+***********************RESOURCE STATUS(Name, Remaining): A=4 B=0 ***********************
+
+
+                        **************END DETECTING DEADLOCK**************
+
+[Thread 2]: Requesting resource B = 4
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=4 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 0]: Paused for 0 seconds
+[Thread 1]: Requesting resource A = 1
+[Thread 1]: Resource A allocated
+***********************RESOURCE STATUS(Name, Remaining): A=3 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=6 B=0
+
+[Thread 1]: Paused for 0 seconds
+[Thread 0]: RUNNING
+[Thread 0]: Need resource A = 5
+[Thread 0]: Need resource B = 6
+[Thread 0]: Requesting resource A = 1
+[Thread 0]: Resource A allocated
+***********************RESOURCE STATUS(Name, Remaining): A=2 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=4 B=6
+
+[Thread 0]: Paused for 0 seconds
+[Thread 1]: Requesting resource A = 4
+[Thread 1]: Allocated 2 instances of Resource A. Waiting for A
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=4 B=0
+
+[Thread 0]: Requesting resource A = 2
+[Thread 0]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=4 B=6
+
+[Thread 2]: Requesting resource B = 1
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 2
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=4 B=0
+
+[Thread 0]: Requesting resource A = 4
+[Thread 0]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=4 B=6
+
+[Thread 2]: Requesting resource B = 2
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 3
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=4 B=0
+
+[Thread 0]: Requesting resource A = 4
+[Thread 0]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=4 B=6
+
+[Thread 2]: Requesting resource B = 3
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 1
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=4 B=0
+
+[Thread 0]: Requesting resource A = 1
+[Thread 0]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=4 B=6
+
+
+                        **************DETECTING DEADLOCK**************
+
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+                                *Deadlock Detected*
+
+                                Thread 0 deadlocked!!!!!
+                                Thread 1 deadlocked!!!!!
+                                Thread 2 deadlocked!!!!!
+
+Heuristic 4: Terminate first thread which is deadlocked
+Terminating Thread 0
+***********************RESOURCE STATUS(Name, Remaining): A=1 B=0 ***********************
+
+
+                        **************END DETECTING DEADLOCK**************
+
+[Thread 2]: Requesting resource B = 3
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=1 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 3
+[Thread 1]: Allocated 1 instances of Resource A. Waiting for A
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: Paused for 1 seconds
+[Thread 2]: Requesting resource B = 1
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 3
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: RUNNING
+[Thread 0]: Need resource A = 3
+[Thread 0]: Need resource B = 10
+[Thread 0]: Requesting resource B = 10
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=3 B=10
+
+[Thread 2]: Requesting resource B = 1
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 3
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: Requesting resource B = 6
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=3 B=10
+
+[Thread 2]: Requesting resource B = 1
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 1
+[Thread 0]: Requesting resource B = 6
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=3 B=10
+
+
+                        **************DETECTING DEADLOCK**************
+
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+                                *Deadlock Detected*
+
+                                Thread 0 deadlocked!!!!!
+                                Thread 1 deadlocked!!!!!
+                                Thread 2 deadlocked!!!!!
+
+Heuristic 4: Terminate first thread which is deadlocked
+Terminating Thread 0
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+
+                        **************END DETECTING DEADLOCK**************
+
+[Thread 2]: Requesting resource B = 1
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 2
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: Paused for 0 seconds
+[Thread 0]: RUNNING
+[Thread 0]: Need resource A = 5
+[Thread 0]: Need resource B = 6
+[Thread 0]: Requesting resource B = 6
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=5 B=6
+
+[Thread 2]: Requesting resource B = 3
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 2
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: Requesting resource B = 5
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=5 B=6
+
+[Thread 2]: Requesting resource B = 4
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 2
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: Requesting resource B = 3
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=5 B=6
+
+[Thread 2]: Requesting resource B = 3
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 1]: Requesting resource A = 1
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: Requesting resource B = 1
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=5 B=6
+
+
+                        **************DETECTING DEADLOCK**************
+
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+                                *Deadlock Detected*
+
+                                Thread 0 deadlocked!!!!!
+                                Thread 1 deadlocked!!!!!
+                                Thread 2 deadlocked!!!!!
+
+Heuristic 4: Terminate first thread which is deadlocked
+Terminating Thread 0
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+
+                        **************END DETECTING DEADLOCK**************
+
+[Thread 1]: Requesting resource A = 1
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 2]: Requesting resource B = 2
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 0]: Paused for 1 seconds
+[Thread 1]: Requesting resource A = 1
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 2]: Requesting resource B = 1
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 0]: RUNNING
+[Thread 0]: Need resource A = 1
+[Thread 0]: Need resource B = 8
+[Thread 0]: Requesting resource B = 7
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=1 B=8
+
+[Thread 1]: Requesting resource A = 2
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 2]: Requesting resource B = 4
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+[Thread 0]: Requesting resource B = 4
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=1 B=8
+
+[Thread 1]: Requesting resource A = 1
+[Thread 0]: Requesting resource B = 2
+[Thread 1]: No instances of Resource A available. Waiting for A.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 1]: RESOURCE STATUS(Name, Need): A=3 B=0
+
+[Thread 0]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 0]: RESOURCE STATUS(Name, Need): A=1 B=8
+
+[Thread 2]: Requesting resource B = 1
+[Thread 2]: No instances of Resource B available. Waiting for B.
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+[Thread 2]: RESOURCE STATUS(Name, Need): A=2 B=4
+
+
+                        **************DETECTING DEADLOCK**************
+
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+                                *Deadlock Detected*
+
+                                Thread 0 deadlocked!!!!!
+                                Thread 1 deadlocked!!!!!
+                                Thread 2 deadlocked!!!!!
+
+Heuristic 4: Terminate first thread which is deadlocked
+Terminating Thread 0
+***********************RESOURCE STATUS(Name, Remaining): A=0 B=0 ***********************
+
+Deadlocked occured at time = 4.000678 seconds
+Deadlocked occured at time = 4.000370 seconds
+Deadlocked occured at time = 4.000256 seconds
+Deadlocked occured at time = 4.000391 seconds
+Deadlocked occured at time = 4.000353 seconds
+
+Average Time elapsed for Heuristic 4 = 4.000410 seconds
+EXITING THE PROGRAM

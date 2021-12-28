@@ -1,0 +1,37 @@
+pranjali@DESKTOP-PE8R3SN:~/a3$ gcc test.c -o test
+pranjali@DESKTOP-PE8R3SN:~/a3$ ./test
+*********************Testing find_first_fit()*********************
+
+[+]Test Case 1: Passed
+
+[+]Test Case 2: Passed
+
+[+]Test Case 3: Passed
+
+*********************Testing find_next_fit()*********************
+
+[+]Test Case 1: Passed
+
+[+]Test Case 2: Passed
+
+[+]Test Case 3: Passed
+
+*********************Testing find_best_fit()*********************
+
+[+]Test Case 1: Passed
+
+[+]Test Case 2: Passed
+
+[+]Test Case 3: Passed
+
+*********************Testing find_random_duration()*********************
+
+[+]Test Case 1: Passed
+
+*********************Testing find_random_size()*********************
+
+[+]Test Case 1: Passed
+
+*********************Testing random_float()*********************
+
+[+]Test Case 1: Passed

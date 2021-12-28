@@ -1,0 +1,16 @@
+OBSERVATIONS
+
+Parameters    Scheduling_Policy     Max             Min             Avg             StdDev          Throughput 
+7500  512 4   RANDOM                80.000000       7.600000        39.720000       18.668090       85.178876 
+15000 512 4   RANDOM                97.600000       8.400000        46.910000       23.953328       71.633238
+7500  512 4   FIFO                  80.000000       13.600000       41.720000       18.348232       73.637703
+15000 512 4   FIFO                  87.200000       6.800000        38.310000       22.717700       69.637883
+7500  512 4   SSTF                  52.000000       7.600000        24.120000       10.318992       147.492625
+15000 512 4   SSTF                  47.000000       2.400000        21.110000       11.690932       173.010381
+7500  512 4   SCAN                  73.600000       10.800000       28.520000       17.654053       117.096019
+15000 512 4   SCAN                  49.600000       2.400000        21.510000       12.875943       162.337662
+7500  512 4   CSCAN                 94.400000       10.800000       34.920000       24.305752       98.231827
+15000 512 4   CSCAN                 97.800000       2.400000        30.110000       25.106531       104.602510
+
+Note: Time is in milliseconds. Throughput is requests/second
+|_On increasing Rotational speed, it is observed that throughput is increasing and repsonse time is decreasing. 

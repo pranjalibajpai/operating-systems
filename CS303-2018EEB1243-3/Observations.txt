@@ -1,0 +1,61 @@
+1. Observations
+
+    Case 1
+        p       q       n   m   t   T                Memory Utilization             Average Turnaround Time
+                                            First_Fit   Next_Fit    Best_Fit    First_Fit     Next_Fit       Best_Fit
+        1000    200     10  10  10  200     95.000000   93.000000   96.000000   5386.517632   5392.099641    5382.251597
+
+    Case 2
+        p       q       n   m   t   T                Memory Utilization             Average Turnaround Time
+                                            First_Fit   Next_Fit    Best_Fit    First_Fit     Next_Fit      Best_Fit
+        1000    200     10  10  10  200     95.000000   93.000000   96.000000   5386.517632   5392.099641   5382.251597
+        2000    200     10  10  10  200     97.000000   96.500000   97.500000   2879.161452   2938.564864   2807.930392
+        3000    200     10  10  10  200     93.000000   90.666667   98.333333   2469.603117   2548.956830   2386.206486
+        4000    200     10  10  10  300     96.000000   94.750000   99.000000   4413.766557   4537.107244   4303.228795
+        5000    200     10  10  10  300     97.600000   96.200000   100.00000   2599.677495   2776.029589   2440.083593
+        6000    200     10  10  10  300     95.333333   92.666667   99.000000   5480.346006   5582.831893   5397.676853
+        7000    200     10  10  10  300     96.714286   93.857143   99.714286   5034.098142   5170.619871   4952.780539
+        8000    200     10  10  10  400     95.750000   92.750000   99.125000   5643.866696   5864.512547   5497.354853
+
+    Case 3
+        p       q       n   m   t   T                Memory Utilization             Average Turnaround Time
+                                            First_Fit   Next_Fit    Best_Fit    First_Fit     Next_Fit      Best_Fit
+        1000    200     10  10  10  200     95.000000   93.000000   96.000000   5386.517632   5392.099641   5382.251597
+        1000    200     12  10  10  200     92.000000   95.000000   96.000000   5027.881881   5043.968577   5013.477699
+        1000    200     14  10  10  200     91.000000   95.000000   94.000000   5292.784268   5291.455213   5274.863698
+        1000    200     16  10  10  200     95.000000   92.000000   96.000000   5610.299797   5601.308828   5598.637457
+        1000    200     18  10  10  200     97.000000   97.000000   99.000000   5496.927394   5494.826632   5487.428541
+        1000    200     20  10  10  200     93.000000   92.000000   97.000000   5021.416431   5033.267276   5006.493830
+
+    Case 4
+        p       q       n   m   t   T                Memory Utilization             Average Turnaround Time
+                                            First_Fit   Next_Fit    Best_Fit    First_Fit     Next_Fit      Best_Fit
+        1000    200     10  10  10  200     95.000000   93.000000   96.000000   5386.517632   5392.099641   5382.251597
+        1000    200     10  12  10  200     95.000000   91.000000   98.000000   4622.714483   4626.950290   4596.655249
+        1000    200     10  14  10  200     97.000000   99.000000   98.000000   5389.224436   5398.613219   5381.339969
+        1000    200     10  16  10  200     92.000000   90.000000   99.000000   5404.483796   5403.395358   5398.469520
+        1000    200     10  18  10  200     87.000000   94.000000   98.000000   5424.521823   5437.248057   5412.867946
+        1000    200     20  20  10  200     91.000000   86.000000   95.000000   5083.674500   5090.644374   5049.366326
+
+    Case 5
+        p       q       n   m   t   T                Memory Utilization             Average Turnaround Time
+                                            First_Fit   Next_Fit    Best_Fit    First_Fit     Next_Fit      Best_Fit
+        1000    200     10  10  10  200     95.000000   93.000000   96.000000   5386.517632   5392.099641   5382.251597
+        1000    200     10  10  12  200     97.000000   93.000000   97.000000   5069.145420   5071.505533   5040.916141
+        1000    200     10  10  14  200     98.000000   96.000000   98.000000   5551.786400   5551.028918   5548.456175
+        1000    200     10  10  16  200     96.000000   87.000000   99.000000   5555.400766   5545.967130   5552.529022 
+        1000    200     10  10  18  200     97.000000   89.000000   99.000000   5628.413447   5637.062777   5617.135703
+        1000    200     20  10  20  200     92.000000   89.000000   99.000000   4780.844909   4788.342349   4764.778375
+
+2. Results
+    |_The desirable performace metrics are: highest memory utilization and lowest average turnaround time.
+    |_From the above observations, we can see that the memory utilization of best fit comes out to be highest beacuse the algorithm works in the 
+        same way that minimizes the wastage of memory by finding the smallest block of memory which can be allocated.
+    |_Also, it can be observed that the average turnaround time for the best fit algorithm is lowest, i.e. the time taken for allocating the 
+        request or we can say that the time process waits for it's allocation to occur. It is desirable to have low average turnaround time.
+    |_Since we have the assumption that the time taken for the memory placement decision is negligible, we cannot compare the 3 algorithms on the 
+        basis of time taken for deciding placement decision. 
+    |_But in reality, first fit performs better than best fit due to it's lower placement decision time. In best fit we have to scan the whole 
+        memory to find the correct block of memory while in first fit we find the first block which is available for allocation.
+    |_So, for the given scenario, best fit will be the optimal strategy as it will have maximum memory utilization and lowest average turnaround time.
+    

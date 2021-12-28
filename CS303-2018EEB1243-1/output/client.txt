@@ -1,0 +1,16 @@
+pranjali@DESKTOP-PE8R3SN:~/os/a1/src$ clear
+pranjali@DESKTOP-PE8R3SN:~/os/a1/src$ gcc client.c function.c -o client -ljson-c -ldl
+pranjali@DESKTOP-PE8R3SN:~/os/a1/src$ ./client 5500 /lib/x86_64-linux-gnu/libm.so.6 cos 1.2
+[+]Success: Client program starting
+[+]Success: Client Socket created successfully with file descriptor 3
+[+]Success: Connection established successfully between client and server
+[+]Success: Message send to server
+[+]Success: Acknowledgement from server: Message Received
+[+]Success: Closed Client Socket fd
+pranjali@DESKTOP-PE8R3SN:~/os/a1/src$ ./client 5500 /lib/x86_64-linux-gnu/libm.so.6 pow 3 4
+[+]Success: Client program starting
+[+]Success: Client Socket created successfully with file descriptor 3
+[+]Success: Connection established successfully between client and server
+[+]Success: Message send to server
+[+]Success: Acknowledgement from server: Message Received
+[+]Success: Closed Client Socket fd
