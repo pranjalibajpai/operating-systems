@@ -1,0 +1,4 @@
+imap.gmail.com
+993
+<email address>
+<password>
